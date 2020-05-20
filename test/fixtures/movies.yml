@@ -1,0 +1,13 @@
+parasite: # fixture name
+  title: 'Parasite'
+  director: bong_joon_ho
+  year: '2019'
+  plot_keywords: "|foreign|subtitled|dark comedy|"
+  facebook_likes: <%= rand(800) %>
+
+titanic:
+  title: 'Titanic'
+  director: james_cameron
+  year: '1909'
+  plot_keywords: '|boat|cruise ship|ice|'
+  facebook_likes: <%= rand(800) %>
