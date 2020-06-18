@@ -11,6 +11,4 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
-  include FactoryBot::Syntax::Methods
-  FactoryBot.reload # helpful if Factories are erroring as not registered
 end

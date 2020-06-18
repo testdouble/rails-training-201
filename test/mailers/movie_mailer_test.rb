@@ -2,12 +2,11 @@ require 'test_helper'
 
 class MovieMailerTest < ActionMailer::TestCase
   test "the new movie email tells us about a newly released movie" do
-    movie = create(:movie)
+    movie = movies(:parasite)
     email = MovieMailer.with(movie: movie).new_movie_email
 
     assert_emails 1 do
       email.deliver_now
-      # email.deliver_later
     end
 
     assert_equal ["marla@example.com"], email.to

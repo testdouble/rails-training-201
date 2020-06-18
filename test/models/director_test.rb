@@ -1,11 +1,8 @@
 require 'test_helper'
 
 class DirectorTest < ActiveSupport::TestCase
-  test "director has a name and age" do
-    director = create(:director)
-    assert_equal 0, director.movies.count
-
-    movie = create_list(:movie, 3, director: director)
-    assert_equal 3, director.movies.count
+  test "director has associated movies" do
+    bong_joon_ho = directors(:bong_joon_ho)
+    assert_equal 1, director.movies.count
   end
 end

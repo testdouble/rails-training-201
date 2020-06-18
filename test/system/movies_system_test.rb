@@ -2,7 +2,7 @@ require "application_system_test_case"
 
 class MoviesSystemTest < ApplicationSystemTestCase
   test "visiting the show page" do
-    movie = create(:movie)
+    movie = movies(:parasite)
 
     # visit "/movies/#{movie.id}"
     visit movie_path(movie)
@@ -12,13 +12,13 @@ class MoviesSystemTest < ApplicationSystemTestCase
   end
 
   test "visiting the index page" do
-    movie1 = create(:movie)
-    movie2 = create(:movie)
+    parasite = movies(:parasite)
+    titanic = movies(:titanic)
 
     # visit "/movies"
     visit movies_path
 
-    assert_text movie1.title
-    assert_text movie2.title
+    assert_text parasite.title
+    assert_text titanic.title
   end
 end
